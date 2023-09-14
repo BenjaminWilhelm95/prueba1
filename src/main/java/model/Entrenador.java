@@ -7,7 +7,9 @@ public class Entrenador {
     private String numeroTelefono;
     private String deporte;
     private String posicion;
-    public Entrenador(String nombre, String apellido, int edad, String correo, String numeroTelefono, String deporte, String posicion) {
+    private String experiencia;
+    private String especialidad;
+    public Entrenador(String nombre, String apellido, int edad, String correo, String numeroTelefono, String deporte, String posicion, String especialidad, String experiencia) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.edad = edad;
@@ -15,6 +17,8 @@ public class Entrenador {
         this.numeroTelefono = numeroTelefono;
         this.deporte = deporte;
         this.posicion = posicion;
+        this.experiencia = experiencia;
+        this.especialidad = especialidad;
     }
     public String getNombre() {
         return nombre;
@@ -57,5 +61,17 @@ public class Entrenador {
     }
     public void setPosicion(String posicion) {
         this.posicion = posicion;
+    }
+    public String getExperiencia(){
+        return experiencia;
+    }
+    public void setExperiencia(String experiencia) {
+        this.experiencia = experiencia;
+    }
+    public String getEspecialidad(){
+        return especialidad;
+    }
+    public void setEspecialidad(String especialidad) {
+        this.especialidad = especialidad;
     }
 }
