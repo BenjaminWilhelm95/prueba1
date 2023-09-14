@@ -29,9 +29,4 @@ public class ClubDeportivo {
         Partido partido = new Partido(equipoLocal, equipoVisitante, resultadoLocal, resultadoVisitante, new Date());
         partidos.add(partido);
     }
-
-    // Métodos para consultar estadísticas de jugadores y equipos
-    // Implementa tus propios métodos de consulta aquí
-
-    // Otros métodos según tus necesidades
 }
