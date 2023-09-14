@@ -40,24 +40,24 @@ public class Main {
         Equipo equipoVisitanteFutbol = club.getEquipos().get(1); // Obtener el segundo equipo
         Date fechaPartidoFutbol = new Date(); // Fecha actual
 
-        Futbol partidoFutbol = new Futbol(equipoLocalFutbol, equipoVisitanteFutbol, 2, 1, fechaPartidoFutbol, true);
+        Futbol partidoFutbol = new Futbol(equipoLocalFutbol, equipoVisitanteFutbol, 2, 1, fechaPartidoFutbol, "Natural", true, true);
         club.registrarPartido(partidoFutbol);
 
-        // Registrar partidos de baloncesto
         Equipo equipoLocalBaloncesto = club.getEquipos().get(1); // Obtener el segundo equipo
         Equipo equipoVisitanteBaloncesto = club.getEquipos().get(2); // Obtener el tercer equipo
         Date fechaPartidoBaloncesto = new Date(); // Fecha actual
 
-        Baloncesto partidoBaloncesto = new Baloncesto(equipoLocalBaloncesto, equipoVisitanteBaloncesto, 80, 75, fechaPartidoBaloncesto, false, 4);
+        Baloncesto partidoBaloncesto = new Baloncesto(equipoLocalBaloncesto, equipoVisitanteBaloncesto, 80, 75, fechaPartidoBaloncesto, "Interior", 4);
         club.registrarPartido(partidoBaloncesto);
 
-        // Registrar partidos de tenis
+// Registrar partidos de tenis
         Equipo equipoLocalTenis = club.getEquipos().get(2); // Obtener el tercer equipo
         Equipo equipoVisitanteTenis = club.getEquipos().get(0); // Obtener el primer equipo
         Date fechaPartidoTenis = new Date(); // Fecha actual
 
-        Tenis partidoTenis = new Tenis(equipoLocalTenis, equipoVisitanteTenis, true, false, fechaPartidoTenis);
+        Tenis partidoTenis = new Tenis(equipoLocalTenis, equipoVisitanteTenis, "Césped", true, false, fechaPartidoTenis);
         club.registrarPartido(partidoTenis);
+
 
         // Consultar estadísticas de un deportista y equipo en cada deporte
         club.consultarEstadisticasDeportista(deportista1);
