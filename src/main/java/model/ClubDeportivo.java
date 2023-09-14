@@ -1,7 +1,6 @@
 package model;
 import java.util.ArrayList;
 import java.util.List;
-
 public class ClubDeportivo {
     private List<Deportista> deportistas;
     private List<Entrenador> entrenadores;

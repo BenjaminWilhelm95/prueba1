@@ -1,48 +1,31 @@
 package model;
-
 import java.util.Date;
-
-public class Tenis {
-    private Equipo equipoLocal;
-    private Equipo equipoVisitante;
-    private boolean esLocal;
+public class Tenis extends Partido {
+    private String tipoCancha;
+    private boolean esIndividual;
     private boolean esDoble;
-    private Date fecha;
-    public Tenis(Equipo equipoLocal, Equipo equipoVisitante, boolean esLocal, boolean esDoble, Date fecha) {
-        this.equipoLocal = equipoLocal;
-        this.equipoVisitante = equipoVisitante;
-        this.esLocal = esLocal;
+    public Tenis(Equipo equipoLocal, Equipo equipoVisitante, String tipoCancha, boolean esIndividual, boolean esDoble, Date fecha) {
+        super(equipoLocal, equipoVisitante, 0, 0, fecha);
+        this.tipoCancha = tipoCancha;
+        this.esIndividual = esIndividual;
         this.esDoble = esDoble;
-        this.fecha = fecha;
     }
-    public Equipo getEquipoLocal() {
-        return equipoLocal;
+    public String getTipoCancha() {
+        return tipoCancha;
     }
-    public void setEquipoLocal(Equipo equipoLocal) {
-        this.equipoLocal = equipoLocal;
+    public void setTipoCancha(String tipoCancha) {
+        this.tipoCancha = tipoCancha;
     }
-    public Equipo getEquipoVisitante() {
-        return equipoVisitante;
+    public boolean isEsIndividual() {
+        return esIndividual;
     }
-    public void setEquipoVisitante(Equipo equipoVisitante) {
-        this.equipoVisitante = equipoVisitante;
+    public void setEsIndividual(boolean esIndividual) {
+        this.esIndividual = esIndividual;
     }
-    public boolean esLocal() {
-        return esLocal;
-    }
-    public void setLocal(boolean esLocal) {
-        this.esLocal = esLocal;
-    }
-    public boolean esDoble() {
+    public boolean isEsDoble() {
         return esDoble;
     }
-    public void setDoble(boolean esDoble) {
+    public void setEsDoble(boolean esDoble) {
         this.esDoble = esDoble;
-    }
-    public Date getFecha() {
-        return fecha;
-    }
-    public void setFecha(Date fecha) {
-        this.fecha = fecha;
     }
 }

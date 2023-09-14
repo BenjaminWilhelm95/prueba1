@@ -1,60 +1,34 @@
 package model;
-
 import java.util.Date;
+public class Futbol extends Partido {
+    private String tipoCampo;
+    private boolean esLocalEquipoLocal;
+    private boolean esLocalEquipoVisitante;
+    
+    public Futbol(Equipo equipoLocal, Equipo equipoVisitante, int golesLocal, int golesVisitante, Date fecha,
+                  String tipoCampo, boolean esLocalEquipoLocal, boolean esLocalEquipoVisitante) {
+        super(equipoLocal, equipoVisitante, golesLocal, golesVisitante, fecha);
+        this.tipoCampo = tipoCampo;
+        this.esLocalEquipoLocal = esLocalEquipoLocal;
+        this.esLocalEquipoVisitante = esLocalEquipoVisitante;
 
-public class Futbol {
-    private Equipo equipoLocal;
-    private Equipo equipoVisitante;
-    private int golesLocal;
-    private int golesVisitante;
-    private Date fecha;
-    private boolean esLocal;
-    public Futbol(Equipo equipoLocal, Equipo equipoVisitante, int golesLocal, int golesVisitante, Date fecha, boolean esLocal) {
-        this.equipoLocal = equipoLocal;
-        this.equipoVisitante = equipoVisitante;
-        this.golesLocal = golesLocal;
-        this.golesVisitante = golesVisitante;
-        this.fecha = fecha;
-        this.esLocal = esLocal;
     }
-    public Equipo getEquipoLocal() {
-        return equipoLocal;
+    public String getTipoCampo() {
+        return tipoCampo;
     }
-    public void setEquipoLocal(Equipo equipoLocal) {
-        this.equipoLocal = equipoLocal;
+    public void setTipoCampo(String tipoCampo) {
+        this.tipoCampo = tipoCampo;
     }
-    public Equipo getEquipoVisitante() {
-        return equipoVisitante;
+    public boolean isEsLocalEquipoLocal() {
+        return esLocalEquipoLocal;
     }
-    public void setEquipoVisitante(Equipo equipoVisitante) {
-        this.equipoVisitante = equipoVisitante;
+    public void setEsLocalEquipoLocal(boolean esLocalEquipoLocal) {
+        this.esLocalEquipoLocal = esLocalEquipoLocal;
     }
-    public int getGolesLocal() {
-        return golesLocal;
+    public boolean isEsLocalEquipoVisitante() {
+        return esLocalEquipoVisitante;
     }
-    public void setGolesLocal(int golesLocal) {
-        this.golesLocal = golesLocal;
-    }
-    public int getGolesVisitante() {
-        return golesVisitante;
-    }
-    public void setGolesVisitante(int golesVisitante) {
-        this.golesVisitante = golesVisitante;
-    }
-
-    public Date getFecha() {
-        return fecha;
-    }
-
-    public void setFecha(Date fecha) {
-        this.fecha = fecha;
-    }
-
-    public boolean esLocal() {
-        return esLocal;
-    }
-
-    public void setLocal(boolean esLocal) {
-        this.esLocal = esLocal;
+    public void setEsLocalEquipoVisitante(boolean esLocalEquipoVisitante) {
+        this.esLocalEquipoVisitante = esLocalEquipoVisitante;
     }
 }

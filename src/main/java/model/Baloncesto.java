@@ -1,65 +1,24 @@
 package model;
-
 import java.util.Date;
-
-public class Baloncesto {
-    private Equipo equipoLocal;
-    private Equipo equipoVisitante;
-    private int puntosLocal;
-    private int puntosVisitante;
-    private Date fecha;
-    private boolean esLocal;
-    private int tiemposJugados;
-
-    public Baloncesto(Equipo equipoLocal, Equipo equipoVisitante, int puntosLocal, int puntosVisitante, Date fecha, boolean esLocal, int tiemposJugados) {
-        this.equipoLocal = equipoLocal;
-        this.equipoVisitante = equipoVisitante;
-        this.puntosLocal = puntosLocal;
-        this.puntosVisitante = puntosVisitante;
-        this.fecha = fecha;
-        this.esLocal = esLocal;
-        this.tiemposJugados = tiemposJugados;
+public class Baloncesto extends Partido {
+    private String tipoCancha;
+    private int numTiemposJugados;
+    public Baloncesto(Equipo equipoLocal, Equipo equipoVisitante, int puntosLocal, int puntosVisitante, Date fecha,
+                      String tipoCancha, int numTiemposJugados) {
+        super(equipoLocal, equipoVisitante, puntosLocal, puntosVisitante, fecha);
+        this.tipoCancha = tipoCancha;
+        this.numTiemposJugados = numTiemposJugados;
     }
-    public Equipo getEquipoLocal() {
-        return equipoLocal;
+    public String getTipoCancha() {
+        return tipoCancha;
     }
-    public void setEquipoLocal(Equipo equipoLocal) {
-        this.equipoLocal = equipoLocal;
+    public void setTipoCancha(String tipoCancha) {
+        this.tipoCancha = tipoCancha;
     }
-    public Equipo getEquipoVisitante() {
-        return equipoVisitante;
+    public int getNumTiemposJugados() {
+        return numTiemposJugados;
     }
-    public void setEquipoVisitante(Equipo equipoVisitante) {
-        this.equipoVisitante = equipoVisitante;
-    }
-    public int getPuntosLocal() {
-        return puntosLocal;
-    }
-    public void setPuntosLocal(int puntosLocal) {
-        this.puntosLocal = puntosLocal;
-    }
-    public int getPuntosVisitante() {
-        return puntosVisitante;
-    }
-    public void setPuntosVisitante(int puntosVisitante) {
-        this.puntosVisitante = puntosVisitante;
-    }
-    public Date getFecha() {
-        return fecha;
-    }
-    public void setFecha(Date fecha) {
-        this.fecha = fecha;
-    }
-    public boolean esLocal() {
-        return esLocal;
-    }
-    public void setLocal(boolean esLocal) {
-        this.esLocal = esLocal;
-    }
-    public int getTiemposJugados() {
-        return tiemposJugados;
-    }
-    public void setTiemposJugados(int tiemposJugados) {
-        this.tiemposJugados = tiemposJugados;
+    public void setNumTiemposJugados(int numTiemposJugados) {
+        this.numTiemposJugados = numTiemposJugados;
     }
 }
