@@ -1,6 +1,7 @@
 package model;
 import java.util.ArrayList;
 import java.util.List;
+
 public class ClubDeportivo {
     private List<Deportista> deportistas;
     private List<Entrenador> entrenadores;
@@ -12,21 +13,35 @@ public class ClubDeportivo {
         equipos = new ArrayList<>();
         partidos = new ArrayList<>();
     }
-    // Método para registrar deportista, entrenador, equipo y partido
     public void registrarDeportista(Deportista deportista) {
         deportistas.add(deportista);
     }
     public void registrarEntrenador(Entrenador entrenador) {
         entrenadores.add(entrenador);
     }
-
     public void crearEquipo(String nombreEquipo, Entrenador entrenador) {
         Equipo equipo = new Equipo(nombreEquipo, entrenador);
         equipos.add(equipo);
     }
-
-    public void registrarPartido(Equipo equipoLocal, Equipo equipoVisitante, int resultadoLocal, int resultadoVisitante) {
-        Partido partido = new Partido(equipoLocal, equipoVisitante, resultadoLocal, resultadoVisitante, new Date());
+    public void registrarPartido(Partido partido) {
         partidos.add(partido);
+    }
+    public void consultarEstadisticasDeportista(Deportista deportista) {
+        for (Deportista d : deportistas) {
+            if (d.equals(deportista)) {
+                System.out.println("Estadísticas de " + d.getNombre() + " " + d.getApellido());
+                return;
+            }
+        }
+        System.out.println("No se encontraron estadísticas para " + deportista.getNombre() + " " + deportista.getApellido());
+    }
+    public void consultarEstadisticasEquipo(Equipo equipo) {
+        for (Equipo e : equipos) {
+            if (e.equals(equipo)) {
+                System.out.println("Estadísticas del equipo " + e.getNombre());
+                return;
+            }
+        }
+        System.out.println("No se encontraron estadísticas para el equipo " + equipo.getNombre());
     }
 }
