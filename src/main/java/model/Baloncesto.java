@@ -8,8 +8,8 @@ public class Baloncesto {
     private int puntosLocal;
     private int puntosVisitante;
     private Date fecha;
-    private boolean esLocal; // Indica si el equipo local es el anfitrión
-    private int tiemposJugados; // Número de tiempos jugados en el partido
+    private boolean esLocal;
+    private int tiemposJugados;
 
     public Baloncesto(Equipo equipoLocal, Equipo equipoVisitante, int puntosLocal, int puntosVisitante, Date fecha, boolean esLocal, int tiemposJugados) {
         this.equipoLocal = equipoLocal;

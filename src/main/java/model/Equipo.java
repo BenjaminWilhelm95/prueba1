@@ -5,7 +5,6 @@ public class Equipo {
     private String nombre;
     private List<Deportista> jugadores;
     private Entrenador entrenador;
-
     public Equipo(String nombre, Entrenador entrenador) {
         this.nombre = nombre;
         this.entrenador = entrenador;

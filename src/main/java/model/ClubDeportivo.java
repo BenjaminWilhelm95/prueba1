@@ -26,6 +26,9 @@ public class ClubDeportivo {
     public void registrarPartido(Partido partido) {
         partidos.add(partido);
     }
+    public List<Equipo> getEquipos() {
+        return equipos;
+    }
     public void consultarEstadisticasDeportista(Deportista deportista) {
         for (Deportista d : deportistas) {
             if (d.equals(deportista)) {
